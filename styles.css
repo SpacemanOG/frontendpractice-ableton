@@ -1,10 +1,8 @@
 :root {
-    --light-yellow: #fbffa7;
-    --light-blue: #b1c5ff;
-    --light-green: #b6ffc0;
-    --orange: #ff764d;
-    --purple: #d5b3ff;
-    --dark-blue: #0000ff;
+    --light-red: rgb(243, 129, 129);
+    --light-orange: rgb(252, 227, 138);
+    --light-lime: rgb(234, 255, 208);
+    --light-blue: rgb(149, 225, 211);
 }
 
 *,
@@ -12,12 +10,82 @@
 ::after {
     margin: 0;
     padding: 0;
+    /* GOT THE FOLLOWING FROM https: //css-tricks.com/box-sizing/ */
+    -webkit-box-sizing: inherit;
+    -moz-box-sizing: inherit;
+    box-sizing: inherit;
 }
 
 html {
+    /* GOT THE FOLLOWING FROM https: //css-tricks.com/box-sizing/ */
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
     box-sizing: border-box;
 }
 
 body {
     font-family: 'Nunito Sans', sans-serif;
+}
+
+
+/* SETTINGS FOR THE NAV SECTION */
+
+/* nav,
+nav>*,
+.navBarPrimary>* {
+    border: 1px solid black;
+} */
+
+nav {
+    width: 100vw;
+    padding: 0 4vw;
+    margin: 0 auto;
+    display: flex;
+    background-color: var(--light-red);
+}
+
+.navLogo {
+    padding: 2vh 0 1vh 0;
+}
+
+.navLogo img {
+    width: 48px;
+    height: 48px;
+    margin-right: 1vw;
+}
+
+.navBarPrimary {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.navBarLinks ul,
+.navBarLogin ul {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    list-style-type: none;
+    font-size: 1.2rem;
+}
+
+.navBarLogin ul {
+    column-gap: 2vw;
+    font-weight: 700;
+}
+
+.navLinks {
+    width: 6vw;
+    height: 100%;
+    text-align: center;
+    padding-top: 4.8vh;
+}
+
+.navLinks:hover {
+    cursor: pointer;
+    background: linear-gradient(var(--light-red), var(--light-orange));
+}
+
+.loginLinks:hover {
+    cursor: pointer;
 }
