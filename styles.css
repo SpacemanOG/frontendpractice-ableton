@@ -3,6 +3,7 @@
     --light-orange: rgb(252, 227, 138);
     --light-lime: rgb(234, 255, 208);
     --light-blue: rgb(149, 225, 211);
+    --navbar-bgcolor: rgb(40, 40, 40);
 }
 
 *,
@@ -37,55 +38,74 @@ nav>*,
 } */
 
 nav {
-    width: 100vw;
-    padding: 0 4vw;
-    margin: 0 auto;
-    display: flex;
-    background-color: var(--light-red);
+    width: 12vw;
+    height: 100vh;
+    background-color: var(--navbar-bgcolor);
+    position: fixed;
+    top: 0;
+    left: 0;      
+    font-size: 2.4rem;
 }
 
 .navLogo {
-    padding: 2vh 0 1vh 0;
+    width: 100%;    
+    margin-top: 4vh;
+    /* USING TEXT ALIGN HERE TO CENTER THE IMAGE */
+    text-align: center;
 }
 
 .navLogo img {
-    width: 48px;
-    height: 48px;
-    margin-right: 1vw;
+    width: 80%;
+    height: 80%;
 }
 
 .navBarPrimary {
-    width: 100%;
+    height: 68vh;
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
+    padding-left: 1vw;
 }
 
-.navBarLinks ul,
-.navBarLogin ul {
-    height: 100%;
+.navBarLogin {
+    font-size: 1.6rem;
+}
+
+.navBarLinks ul, .navBarLogin ul {
     display: flex;
-    align-items: center;
+    flex-direction: column;
+    row-gap: 2vh;
     list-style-type: none;
-    font-size: 1.2rem;
 }
 
-.navBarLogin ul {
-    column-gap: 2vw;
+
+
+.navLinks:first-child {
     font-weight: 700;
+    color: var(--light-red);
 }
 
-.navLinks {
-    width: 6vw;
-    height: 100%;
-    text-align: center;
-    padding-top: 4.8vh;
+.navLinks:nth-child(2) {
+    font-weight: 700;
+    color: var(--light-orange);
 }
 
-.navLinks:hover {
-    cursor: pointer;
-    background: linear-gradient(var(--light-red), var(--light-orange));
+.navLinks:nth-child(3) {
+    font-weight: 700;
+    color: var(--light-blue);
 }
 
-.loginLinks:hover {
-    cursor: pointer;
+.navLinks:hover, .loginLinks:hover {
+    cursor: pointer;    
+}
+
+
+/* SETTINGS FOR THE HERO SECTION */
+.heroImage {
+    height: 400px;
+    overflow: hidden;
+}
+
+.heroImage img {
+    width: 100%;
 }
