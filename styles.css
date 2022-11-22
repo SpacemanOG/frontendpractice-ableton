@@ -4,9 +4,20 @@
     --light-orange: rgb(252, 227, 138);
     --light-lime: rgb(234, 255, 208);
     --light-blue: rgb(149, 225, 211);
+
+    /* PERSONAL MANUAL COLORS */
     --navbar-bgcolor: rgb(40, 40, 40);
-    --bright-grey: rgb(200, 200, 200);
-    --dark-grey: rgb(120, 120, 120);
+    --paragraph: #FFFBFE;
+    --header2: #D0CFCF;
+    --header2dark: #7A7D7D;
+
+    /* FRONTEND PRACTICE PROVIDED COLORS */
+    --provided-light-yellow: #fbffa7;
+    --provided-light-blue: #b1c5ff;
+    --provided-light-green: #b6ffc0;
+    --provided-orange-red: #ff764d;
+    --provided-purple: #d5b3ff;
+    --provided-blue: #0000ff;
 }
 
 *,
@@ -31,6 +42,24 @@ body {
     font-family: 'Nunito Sans', sans-serif;
 }
 
+h1 {
+    font-size: 4vw;
+}
+
+h2 {
+    /* margin-top: 4vh; */
+    font-family: 'DM Serif Display', serif;
+    font-size: 2.4vw;
+    color: var(--header2);
+}
+
+p {
+    margin-top: 4vh;
+    font-size: 1.6vw;
+    color: var(--paragraph);
+    line-height: 1.5;
+}
+
 /* TOP RIBBON - COMPANY NAME SECTION */
 .companyNameSection {
     width: 100vw;
@@ -38,7 +67,7 @@ body {
     position: fixed;
     top: 0;
     left: 0;
-    background-color: rgba(0, 0, 0, 0.8);
+    background-color: rgba(0, 0, 0, 0.80);
     backdrop-filter: blur(16px);
     z-index: 2;
     display: flex;
@@ -47,8 +76,7 @@ body {
 
 .companyName {
     margin-left: 2.4vw;
-    color: rgb(255, 255, 255);
-    font-size: 4vw;
+    color: var(--provided-orange-red);
 }
 
 
@@ -61,7 +89,7 @@ nav {
     position: fixed;
     top: 0;
     left: 0;
-    color: var(--dark-grey);
+    color: var(--header2dark);
     z-index: 1;
 }
 
@@ -99,22 +127,22 @@ nav {
     cursor: pointer;
     background-color: rgb(00, 00, 00);
     color: rgb(255, 255, 255);
-    border-bottom: 1px solid var(--bright-grey);
+    border-bottom: 1px solid var(--header2);
 }
 
 .navLinks:first-child {
     font-weight: 700;
-    color: var(--light-red);
+    color: var(--provided-light-blue);
 }
 
 .navLinks:nth-child(2) {
     font-weight: 700;
-    color: var(--light-orange);
+    color: var(--provided-light-green);
 }
 
 .navLinks:nth-child(3) {
     font-weight: 700;
-    color: var(--light-blue);
+    color: var(--provided-light-yellow);
 }
 
 
@@ -142,30 +170,15 @@ nav {
 .heroText {
     position: absolute;
     bottom: 56vh;
-    /* transform: translateY(-50%); */
     height: max-content;
-    font-size: 1.6vw;
     background-color: rgba(0, 0, 0, 0.80);
-    backdrop-filter: blur(16px);
+    backdrop-filter: blur(32px);
     padding: 4vh 4vw 8vh 4vw;
     text-align: left;
 }
 
-.heroText h2:first-child {
-    color: var(--dark-grey);
-    font-size: 4vw;
-}
-
-.heroText h2:nth-child(2) {
-    font-family: 'DM Serif Display', serif;
-    color: var(--bright-grey);
-}
-
-
-.heroText p {
-    margin-top: 4vh;
-    line-height: 1.5;
-    color: var(--bright-grey);
+.heroText h1 {
+    color: var(--provided-light-blue);
 }
 
 .underline {
@@ -178,13 +191,10 @@ nav {
 main {
     width: 84vw;
     margin-left: 16vw;
-    /* margin-top: 100vh; */
-    padding: 4vh 4vw;
-    background-color: rgb(0, 0, 0);
 }
 
-/* IMAGE SECTION - DIVIDER SETTINGS */
 
+/* IMAGE DIVIDER SETTINGS */
 .imageDivider {
     width: 100%;
     height: max-content;
@@ -209,4 +219,94 @@ main {
     height: 100%;
     object-fit: cover;
     filter: grayscale(100);
+}
+
+/* END OF IMAGE DIVIDER SETTINGS */
+
+
+.mainSectionOne {
+    color: white;
+    padding: 8vh 8vw 4vh 8vw;
+    background-color: rgb(0, 0, 0);
+}
+
+
+/* VIDEO DIVIDER SETTINGS */
+.videoDivider {
+    position: relative;
+    height: 80vh;
+}
+
+.videoDividerTopHalf,
+.videoDividerBottomHalf {
+    height: 50%;
+}
+
+.videoDividerTopHalf {
+    background-color: rgb(0, 0, 0);
+}
+
+.video {
+    width: auto;
+    height: auto;
+    padding: 50px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: var(--provided-light-blue);
+    box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+    border-radius: 16px;
+    display: flex;
+    justify-content: center;
+}
+
+.video iframe {
+    width: 50vw;
+    height: 50vh;
+}
+
+/* END OD VIDEO DIVIDER SETTINGS */
+
+.mainSectionTwo {
+    display: flex;
+    align-items: center;
+    column-gap: 2vw;
+    padding: 4vh 4vw 8vh 4vw;
+}
+
+.mainSectionTwo h2 {
+    width: 56%;
+    font-size: 3.2vw;
+    color: var(--header2dark);
+}
+
+.mainSectionTwo p {
+    width: 44%;
+    color: rgb(0, 0, 0);
+    margin: 0;
+}
+
+
+/* IMAGE DIVIDER TWO - GRADIENT */
+.imageDividerTwo {
+    width: 100%;
+    height: 50vh;
+    background: rgb(255, 255, 255);
+    background: linear-gradient(90deg, rgba(255, 255, 255, 1) 0%, rgba(251, 255, 167, 1) 20%, rgba(182, 255, 192, 1) 40%, rgba(177, 197, 255, 1) 60%, rgba(213, 179, 255, 1) 80%, rgba(255, 255, 255, 1) 100%);
+    position: relative;
+}
+
+.imageDividerTwoInnerContainer {
+width: 80%;
+height: 40vh;
+background-color: rgb(255, 255, 255);
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+}
+
+.imageDividerTwoInnerContainer img {
+    border-radius: 50% 0 50% 50%;
 }
