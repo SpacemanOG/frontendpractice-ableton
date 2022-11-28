@@ -255,6 +255,7 @@ main {
     object-fit: cover;
     filter: grayscale(100);
 }
+
 /* END OF IMAGE DIVIDER SETTINGS */
 
 
@@ -302,6 +303,7 @@ main {
     width: 50vw;
     height: 50vh;
 }
+
 /* END OD VIDEO DIVIDER SETTINGS */
 
 
@@ -312,6 +314,7 @@ main {
     align-items: center;
     column-gap: 2vw;
     padding: 8vh 4vw 8vh 4vw;
+    margin-bottom: 8vw;
 }
 
 .mainSectionTwo h2 {
@@ -329,50 +332,52 @@ main {
 
 /* IMAGE DIVIDER TWO - GRADIENT */
 /* IMAGE DIVIDER TWO - GRADIENT */
-.imageDividerTwo {
+/* .imageDivider2,
+.imageDivider2 * {
+    border: 1px solid black;
+} */
+
+.imageDivider2 {
+    height: 48vw;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    position: relative;
+}
+
+.imageDivider2 img {
+    width: 80%;
+    position: relative;
+    left: 2vw;
+}
+
+.img-3 img {
+    width: 100%;
+    left: 0;
+}
+
+.imgDiv2LeftBox {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    row-gap: 4vw;
+    z-index: 1;
+}
+
+.imgDiv2RightBox {
+    display: flex;
+    align-items: center;
+    z-index: 1;
+}
+
+.imgDiv2Bg {
     width: 56vw;
     height: 56vw;
-    margin: 0 auto;
-    margin-top: 8vh;
-    background: linear-gradient(90deg, rgba(255, 255, 255, 1) 0%, rgba(251, 255, 167, 1) 20%, rgba(182, 255, 192, 1) 40%, rgba(177, 197, 255, 1) 60%, rgba(213, 179, 255, 1) 80%, rgba(255, 255, 255, 1) 100%);
-    display: flex;
-    justify-content: space-around;
-    position: relative;
-    border-radius: 50%;
-}
-
-.imageDividerTwoMid {
-    width: 32vw;
-    height: 32vw;
-    background: linear-gradient(90deg, rgba(255, 255, 255, 1) 0%, rgba(251, 255, 167, 1) 20%, rgba(182, 255, 192, 1) 40%, rgba(177, 197, 255, 1) 60%, rgba(213, 179, 255, 1) 80%, rgba(255, 255, 255, 1) 100%);
-    border-radius: 0 50% 50% 50%;
-    padding: 2vw;
-    border: 2vw solid white;
+    background-color: var(--provided-light-green);
     position: absolute;
-    top: 50%;
-    left: 50%;
-}
-
-.imageDividerTwoMid img {
-    width: 100%;
-    border-radius: 0 50% 50% 50%;
-}
-
-.imageDividerTwoRight {
-    width: 28vw;
-    height: 28vw;
-    border-radius: 50% 50% 50% 0;
-    border: 2vw solid white;
-    position: absolute;
-    top: 0;
     right: 0;
-    overflow: hidden;
-}
-
-.imageDividerTwoRight img {
-    height: 100%;
-    border-radius: 50% 50% 50% 0;
-    object-fit: contain;
+    top: -4vw;
+    z-index: 0;
 }
 
 
@@ -380,7 +385,7 @@ main {
 /* MAIN SECTION THREE */
 /* MAIN SECTION THREE */
 .mainSectionThree {
-    margin-top: 12vh;
+    margin-top: 8vw;
     padding: 4vh 4vw 16vh 4vw;
     background-color: rgb(255, 255, 255);
     border-bottom: 4vh solid var(--provided-purple);
@@ -425,10 +430,10 @@ main {
 
 
 .heroBgImage2 h2 {
-    font-size: 4vw;
-    width: 80%;
+    font-size: 3.2vw;
+    width: 64%;
     color: var(--provided-orange-red);
-    text-shadow: 0 0 8px rgba(0, 0, 0, 1);
+    /* text-shadow: 0 0 16px rgba(0, 0, 0, 1); */
 }
 
 
@@ -437,8 +442,9 @@ main {
 /* MAIN SECTION FOUR */
 .mainSectionFour {
     border-top: 4vh solid var(--provided-light-blue);
-    padding: 8vh 8vw 12vh 8vw;
-    background: linear-gradient(var(--navbar-bgcolor), rgb(0, 0, 0));
+    padding: 8vw 8vw 2vw 8vw;
+    /* background: linear-gradient(var(--navbar-bgcolor), rgb(0, 0, 0)); */
+    background-color: rgb(0, 0, 0);
 }
 
 
@@ -446,5 +452,165 @@ main {
 /* MAIN SECTION FIVE */
 .mainSectionFive {
     background-color: rgb(0, 0, 0);
-    padding: 8vh 8vw 12vh 8vw;
+}
+
+
+/* IMAGE DIVIDER 3 */
+/* IMAGE DIVIDER 3 */
+.imdageDivider3 {
+    height: 56vw;
+    max-height: 680px;
+    background-color: rgb(0, 0, 0);
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    position: relative;
+}
+
+.imgDiv3Img-1,
+.imgDiv3Img-2 {
+    z-index: 1;
+}
+
+.imgDiv3Img-1 img,
+.imgDiv3Img-2 img {
+    width: 80%;
+    position: relative;
+    left: 2vw;
+}
+
+.imgDiv3Bg {
+    width: 56vw;
+    height: 48vw;
+    max-height: 580px;
+    background-color: var(--provided-purple);
+    position: absolute;
+    left: 0;
+    /* top: 3.2vw; */
+    z-index: 0;
+}
+
+
+/* MAIN SECTION FIVE */
+/* MAIN SECTION FIVE */
+.mainSectionFive {
+    padding: 2vw 8vw 8vw 8vw;
+}
+
+
+/* MAIN SECTION SIX */
+/* MAIN SECTION SIX */
+.mainSectionSixContainer {
+    width: 100%;
+    background: rgb(0, 0, 0);
+    background: linear-gradient(180deg, rgba(0, 0, 0, 1) 8%, rgba(255, 255, 255, 0) 92%);
+}
+
+.mainSectionSix {
+    width: 80%;
+    margin: 0 auto;
+    border: 2vw solid var(--provided-light-blue);
+    border-radius: 16px 16px 0 0;
+}
+
+.mainSectionSix img {
+    width: 100%;
+}
+
+.mainSec6-textBox {
+    background-color: var(--provided-light-blue);
+}
+
+.mainSec6-textBox p {
+    margin: 0;
+    color: rgb(0, 0, 0);
+    padding: 4vw 4vw 0 4vw;
+}
+
+.mainSec6-textBox p:nth-child(2) {
+    font-weight: 700;
+}
+
+.mainSec6-textBox a {
+    text-decoration: none;
+}
+
+
+/* FOOTER */
+/* FOOTER */
+footer {
+    margin-left: 16vw;
+    margin-top: 8vw;
+    padding: 4vw;
+    padding-top: 0;
+}
+
+footer *:not(h1) {
+    font-size: 0.8rem;
+    line-height: 2;
+}
+
+footer h1 {
+    color: rgb(0, 0, 0);
+    margin-bottom: 4vw;
+}
+
+.footerLinks li {
+    list-style-type: none;
+}
+
+.footerLinks ul li:first-child:not(.socialLinks li) {
+    font-weight: 700;
+    font-size: 1rem;
+}
+
+.newsletter p {
+    color: rgb(0, 0, 0);
+}
+
+.newsletter p:first-child {
+    font-weight: 700;
+    font-size: 1rem;
+}
+
+.footerLinks {
+    display: grid;
+    grid-template-columns: 0.8fr 0.8fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    row-gap: 2vw;
+    grid-template-areas:
+        "grid-social grid-education grid-newsletter"
+        "grid-community grid-distributors grid-languageLocation";
+}
+
+.social {
+    grid-area: grid-social;
+}
+
+.socialLogo i {
+    font-size: 2rem;
+}
+
+.education {
+    grid-area: grid-education;
+}
+
+.community {
+    grid-area: grid-community;
+}
+
+.distributors {
+    grid-area: grid-distributors;
+}
+
+.newsletter {
+    grid-area: grid-newsletter;
+}
+
+.newsletter p {
+    margin: 0;
+}
+
+.languageAndLocation {
+    grid-area: grid-languageLocation;
 }
